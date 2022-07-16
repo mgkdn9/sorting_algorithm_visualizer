@@ -1,3 +1,29 @@
+**Installation Instructions**
+*** ---Fork and clone this repo**
+*** ---Install npm globally on your computer**
+*** ---Run `npm i` inside the '/client' folder**
+
+**To Deploy**
+*** ---This repo has ONE remote repo on github (for development) and TWO separate repos in each of the `client` and `server` folders that get deployed to heroku
+
+# #
+
+# Dev To Dos
+
+## My Scores
+### --Patch profile for most recent
+### --Get route for my scores
+## Colors
+## Pause button
+## Insertion Sort
+## Make bars adapt to available screen size
+## Get user's name to show in 'welcome message'
+
+## Test your knowledge
+### --Sending 1 int and 4 bools
+
+# #
+
 ## Sorting Aligrathim Visualizer APP
 Live Link: https://algo-views-client.herokuapp.com
 
@@ -18,8 +44,3 @@ Later version a user could import a list to be sorted
 ![Image of expected landing page](Sorting_Visualizer_front_page.png)
 **Signed In Page**
 ![Image of expected signed In Page](Sorting_Visualizer_signed_in_page.png)
-
-#### Installation Instructions
-**Fork and clone this repo**
-**Install npm globally on your computer**
-**Run `npm i` inside the '/client' folder**
