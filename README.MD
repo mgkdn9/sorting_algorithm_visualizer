@@ -4,7 +4,7 @@
 *** ---Run `npm i` inside the '/client' folder**
 
 **To Deploy**
-*** ---This repo has ONE remote repo on github (for development) and TWO separate repos in each of the `client` and `server` folders that get deployed to heroku
+*** ---This repo has ONE remote repo on github (for source control) and TWO separate repos in each of the `client` and `server` folders (that get deployed to heroku)
 
 # #
 
