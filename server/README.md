@@ -1,4 +1,8 @@
-# express-auth-template
+## Refer to parent folder ReadMe
+# # # #
+# BOILER PLATE README
+
+## express-auth-template
 
 A template for starting projects with `express` as an API. Includes
 authentication and common middlewares.

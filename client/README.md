@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+## Refer to parent folder ReadMe
+# # # #
+# BOILER PLATE README
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
