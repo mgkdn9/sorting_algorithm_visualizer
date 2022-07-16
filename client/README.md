@@ -1,4 +1,26 @@
-# Getting Started with Create React App
+# To Deploy
+
+## 
+
+# Dev To Dos
+
+## My Scores
+### --Patch profile for most recent
+### --Get route for my scores
+## Colors
+## Pause button
+## Insertion Sort
+## Make bars adapt to available screen size
+## Get user's name to show in 'welcome message'
+
+## Test your knowledge
+### --Sending 1 int and 4 bools
+
+#
+# BOILER PLATE START 
+#
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -37,17 +59,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/m
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-
-### To Dos
-
-## My Scores
-### Patch profile for most recent
-### Get route for my scores
-## Colors
-## Pause button
-## Insertion Sort
-## Make bars adapt to available screen size
-## Get user's name to show in 'welcome message'
-
-## Test your knowledge
-### Sending 1 int and 4 bools
