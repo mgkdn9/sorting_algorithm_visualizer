@@ -1,6 +1,6 @@
 // import React, { Component, Fragment } from 'react'
 import React, { useState, Fragment } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 // import AuthenticatedRoute from './components/shared/AuthenticatedRoute'
 import Header from "./components/shared/Header";
@@ -332,6 +332,7 @@ const App = () => {
           }
         />
         <Route path="/my-scores" element={<MyScores user={user} />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Fragment>
   );
