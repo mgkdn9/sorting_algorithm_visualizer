@@ -7,7 +7,7 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://mgkdn9.github.io/sorting_algorithm_visualizer",
+  "homepage": "https://mgkdn9.github.io/sorting-algorithm-visualizer-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
