@@ -1,10 +1,6 @@
-# To Deploy
-
-## Refer to client folder ReadMe
-
-#
-# BOILER PLATE START 
-#
+## Refer to parent folder ReadMe
+# # # #
+# BOILER PLATE README
 
 ## express-auth-template
 
