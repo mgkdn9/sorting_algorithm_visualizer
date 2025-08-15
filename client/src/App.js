@@ -49,18 +49,18 @@ const App = () => {
   }
   // funtion for regenerating random number array which just reloads the page
   function regenerate() {
-  const deployedUrl = "https://mgkdn9.github.io/sorting-algorithm-visualizer-frontend";
-  const currentUrl = window.location.href;
+    const deployedUrl =
+      "https://mgkdn9.github.io/sorting-algorithm-visualizer-frontend";
+    const currentUrl = window.location.href;
 
-  if (currentUrl.includes("localhost")) {
-    // Running locally, reload current page
-    window.location.reload(false);
-  } else {
-    // Otherwise, navigate to deployed URL
-    window.location.href = deployedUrl;
+    if (currentUrl.includes("localhost")) {
+      // Running locally, reload current page
+      window.location.reload(false);
+    } else {
+      // Otherwise, navigate to deployed URL
+      window.location.href = deployedUrl;
+    }
   }
-}
-
 
   // helper function for swapping items in an array
   function swap(array, index1, index2) {
