@@ -5,6 +5,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "homepage": "https://mgkdn9.github.io/sorting-algorithm-visualizer-frontend",

@@ -41,7 +41,7 @@ const Header = ({ user }) => (
     expand="sm"
     collapseOnSelect
   >
-    <Navbar.Brand as={Link} to="/" style={linkStyle}>
+    <Navbar.Brand as={Link} to="/" style={{ ...linkStyle, paddingLeft: "10px" }}>
       AlgoViews
     </Navbar.Brand>
 

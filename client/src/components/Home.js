@@ -17,9 +17,10 @@ const Home = (props) => {
   const subtitle = {
     fontSize: '20px',
     textAlign: 'center',
-    width: '650px',
+    width: '100%',
+    maxWidth: '650px',
     margin: '0 auto',
-    paddingBottom: '20px'
+    padding: '0 10px 20px 10px'
   }
   const graph = {
     display: 'flex',
@@ -35,7 +36,7 @@ const Home = (props) => {
 		<>
 			<div style={container}>
 				<h1 style={title}>AlgoViews</h1>
-				<p style={subtitle}>This App was built to help you study and learn more on sorting algrithms</p>
+				<p style={subtitle}>This App was built to help you study and learn more on sorting algrithms.</p>
         <br></br>
         <br></br>
         <Stack > 

@@ -148,10 +148,10 @@ const AlgoTest = (props) => {
                     <h2 style={title}>Algo Test</h2>
                     <h3 style={subtitle}>Question {currentQuestion}</h3>
                     <p style={question}>Watch the animation and guess the sort?</p>
-                    <Graph array={currentQuestion == 1 ? props.heapArray : 
-                                        (currentQuestion == 2 ? props.mergeArray : 
-                                            (currentQuestion == 3 ? props.quickArray : 
-                                                (currentQuestion == 4 ? props.bubbleArray : [])))} 
+                    <Graph array={currentQuestion === 1 ? props.heapArray : 
+                                        (currentQuestion === 2 ? props.mergeArray : 
+                                            (currentQuestion === 3 ? props.quickArray : 
+                                                (currentQuestion === 4 ? props.bubbleArray : [])))} 
                                 arrColors={props.arrColors}/>
                     <div className='flexContainer'>
                         <Form onSubmit={submitQuestion}>
