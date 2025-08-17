@@ -21,7 +21,7 @@ const App = () => {
     setUser(null);
   };
 
-  const graphHeight = window.innerWidth <= 600 ? 200 : 400
+  const graphHeight = window.innerWidth <= 600 ? 200 : 300
 
   //----- STATE VARIABLES -----
   // State for busy doing one of the sorts
