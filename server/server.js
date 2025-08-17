@@ -39,13 +39,13 @@ const allowedOrigin = process.env.CLIENT_ORIGIN || `http://localhost:${clientDev
 
 // set up CORS middleware
 app.use(cors({
-	origin: allowedOrigin,
+	origin: ['https://mgkdn9.github.io', 'http://localhost:3000'],
 	credentials: true, // include if you use cookies or credentials in requests
 }))
 
 // handle preflight OPTIONS requests
 app.options('*', cors({
-	origin: allowedOrigin,
+	origin: ['https://mgkdn9.github.io', 'http://localhost:3000'],
 	credentials: true,
 }))
 

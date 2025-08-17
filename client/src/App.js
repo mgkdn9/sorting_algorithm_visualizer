@@ -14,10 +14,16 @@ import MyScores from "./components/MyScores";
 
 const App = () => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const clearUser = () => {
     setUser(null);
   };
+
+  const onLogoClick = () => {
+    clearUser()
+    setLoading(false)
+  }
 
   const graphHeight = window.innerWidth <= 600 ? 200 : 300; //Dynamic height for phones
 
@@ -279,7 +285,7 @@ const App = () => {
 
   return (
     <Fragment>
-      <Header user={user} />
+      <Header user={user} onLogoClick={onLogoClick}/>
       <Routes>
         <Route
           path="/"
@@ -321,7 +327,7 @@ const App = () => {
           }
         />
         <Route path="/sign-up" element={<SignUp setUser={setUser} />} />
-        <Route path="/sign-in" element={<SignIn setUser={setUser} />} />
+        <Route path="/sign-in" element={<SignIn setUser={setUser} loading={loading} setLoading={setLoading}/>} />
         <Route
           path="/sign-out"
           element={
