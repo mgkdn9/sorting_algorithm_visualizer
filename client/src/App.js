@@ -326,7 +326,7 @@ const App = () => {
             />
           }
         />
-        <Route path="/sign-up" element={<SignUp setUser={setUser} />} />
+        <Route path="/sign-up" element={<SignUp setUser={setUser} loading={loading} setLoading={setLoading} />} />
         <Route path="/sign-in" element={<SignIn setUser={setUser} loading={loading} setLoading={setLoading}/>} />
         <Route
           path="/sign-out"
