@@ -10,7 +10,7 @@ const Home = (props) => {
     marginTop: "100px",
   };
   const title = {
-    frontSize: "40px",
+    fontSize: "40px",
     textAlign: "center",
   };
   const subtitle = {
@@ -25,10 +25,9 @@ const Home = (props) => {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: "400px",
+    height: props.graphHeight,
     overflowX: "auto",
     overflowY: "auto",
-    border: "5px solid black",
   };
 
   return (
@@ -37,14 +36,13 @@ const Home = (props) => {
         <h1 style={title}>AlgoViews</h1>
         <p style={subtitle}>
           This App was built to help you study and learn more on sorting
-          algrithms.
+          algorithms.
         </p>
-        <br></br>
         <Stack>
           <div className="inputContainer">
             <div className="slidecontainer">
               <label
-                hmtlFor="animationSpeed"
+                htmlFor="animationSpeed"
                 style={{
                   display: "inline-block",
                   marginRight: "8px",
@@ -65,7 +63,7 @@ const Home = (props) => {
             </div>
           </div>
           <div style={graph} className="flexContainer">
-            <Graph array={props.array} arrColors={props.arrColors} />
+            <Graph array={props.array} arrColors={props.arrColors} graphHeight={props.graphHeight} />
           </div>
           <div className="flexContainer">
             <Button

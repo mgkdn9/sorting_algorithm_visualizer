@@ -21,17 +21,19 @@ const App = () => {
     setUser(null);
   };
 
+  const graphHeight = window.innerWidth <= 600 ? 200 : 400
+
   //----- STATE VARIABLES -----
   // State for busy doing one of the sorts
   const [busy, setBusy] = useState(false);
   // State for number array
-  const [arrayHome, setArrayHome] = useState(generate(200, 5, 1000));
-  const [arrayTestQuick, setArrayTestQuick] = useState(generate(100, 5, 1000));
+  const [arrayHome, setArrayHome] = useState(generate(200, 5, graphHeight));
+  const [arrayTestQuick, setArrayTestQuick] = useState(generate(100, 5, graphHeight));
   const [arrayTestBubble, setArrayTestBubble] = useState(
-    generate(100, 5, 1000)
+    generate(100, 5, graphHeight)
   );
-  const [arrayTestMerge, setArrayTestMerge] = useState(generate(100, 5, 1000));
-  const [arrayTestHeap, setArrayTestHeap] = useState(generate(100, 5, 1000));
+  const [arrayTestMerge, setArrayTestMerge] = useState(generate(100, 5, graphHeight));
+  const [arrayTestHeap, setArrayTestHeap] = useState(generate(100, 5, graphHeight));
   // State for animation delay
   const [delay, setDelay] = useState(20);
 
@@ -290,6 +292,7 @@ const App = () => {
               delay={delay}
               changeDelay={changeDelay}
               busy={busy}
+              graphHeight={graphHeight}
             />
           }
         />
