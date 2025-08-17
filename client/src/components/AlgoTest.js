@@ -31,9 +31,9 @@ const AlgoTest = (props) => {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    margin: "120px auto 0", // top margin 120px, auto left/right
-    maxWidth: "600px", // limits the width of the container
-    width: "90%", // responsive width
+    margin: "100px auto 0",
+    maxWidth: "600px",
+    width: "90%",
   };
   const title = {
     frontSize: "40px",

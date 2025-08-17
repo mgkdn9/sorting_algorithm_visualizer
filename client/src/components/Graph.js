@@ -1,21 +1,6 @@
-// Graph.jsx
 import React, { useState, useEffect, useRef } from "react";
 
-// Hook to track window width
-// const useWindowWidth = () => {
-//   const [width, setWidth] = useState(window.innerWidth);
-
-//   useEffect(() => {
-//     const handleResize = () => setWidth(window.innerWidth);
-//     window.addEventListener("resize", handleResize);
-//     return () => window.removeEventListener("resize", handleResize);
-//   }, []);
-
-//   return width;
-// };
-
 const Graph = ({ array, graphHeight }) => {
-  // const width = useWindowWidth();
   const containerRef = useRef(null);
   const [width, setWidth] = useState(0);
 
@@ -36,16 +21,11 @@ const Graph = ({ array, graphHeight }) => {
 
   const barWidth = 3;
   const numBars = Math.floor(width / barWidth);
-
-  // Decide max bars based on screen width
-  // const maxBars = Math.floor(width / 5); // 5px minimum per bar
-  // const step = Math.ceil(array.length / maxBars); // pick every Nth element
   const step = Math.ceil(array.length / numBars); // pick every Nth element
 
   const bars = array
     .filter((_, i) => i % step === 0)
     .map((element, index) => {
-      // const barWidth = Math.max(Math.floor(width / maxBars) - 2, 5); // bar width minus margin
       const style = {
         height: `${element}px`,
         width: `${barWidth}px`,

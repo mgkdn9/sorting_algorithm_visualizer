@@ -63,7 +63,11 @@ const Home = (props) => {
             </div>
           </div>
           <div style={graph} className="flexContainer">
-            <Graph array={props.array} arrColors={props.arrColors} graphHeight={props.graphHeight} />
+            <Graph
+              array={props.array}
+              arrColors={props.arrColors}
+              graphHeight={props.graphHeight}
+            />
           </div>
           <div className="flexContainer">
             <Button

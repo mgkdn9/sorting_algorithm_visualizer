@@ -73,7 +73,6 @@ label {
 .flexContainer {
   display: flex;
   justify-content: center;
-  /* align-items: flex-end; */
   align-items: center;
   margin: 5px;
 }
@@ -98,7 +97,7 @@ label {
 
 /* Slider itself */
 .slider {
-  direction: rtl; /* Right-to-left for correct speed */
+  direction: rtl;
   -webkit-appearance: none;
   appearance: none;
   flex: 1; /* Fill remaining space */
@@ -138,10 +137,6 @@ label {
   label {
     font-size: 1rem;
   }
-  /* .slidecontainer {
-    flex-direction: column; 
-    align-items: flex-start;
-  } */
   .slider {
     width: 100%;
     margin-top: 5px;

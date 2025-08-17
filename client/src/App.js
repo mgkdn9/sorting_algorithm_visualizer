@@ -1,8 +1,6 @@
-// import React, { Component, Fragment } from 'react'
 import React, { useState, Fragment } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 
-// import AuthenticatedRoute from './components/shared/AuthenticatedRoute'
 import Header from "./components/shared/Header";
 import RequireAuth from "./components/shared/RequireAuth";
 import Home from "./components/Home";
@@ -21,19 +19,25 @@ const App = () => {
     setUser(null);
   };
 
-  const graphHeight = window.innerWidth <= 600 ? 200 : 300
+  const graphHeight = window.innerWidth <= 600 ? 200 : 300; //Dynamic height for phones
 
   //----- STATE VARIABLES -----
   // State for busy doing one of the sorts
   const [busy, setBusy] = useState(false);
   // State for number array
   const [arrayHome, setArrayHome] = useState(generate(200, 5, graphHeight));
-  const [arrayTestQuick, setArrayTestQuick] = useState(generate(100, 5, graphHeight));
+  const [arrayTestQuick, setArrayTestQuick] = useState(
+    generate(100, 5, graphHeight)
+  );
   const [arrayTestBubble, setArrayTestBubble] = useState(
     generate(100, 5, graphHeight)
   );
-  const [arrayTestMerge, setArrayTestMerge] = useState(generate(100, 5, graphHeight));
-  const [arrayTestHeap, setArrayTestHeap] = useState(generate(100, 5, graphHeight));
+  const [arrayTestMerge, setArrayTestMerge] = useState(
+    generate(100, 5, graphHeight)
+  );
+  const [arrayTestHeap, setArrayTestHeap] = useState(
+    generate(100, 5, graphHeight)
+  );
   // State for animation delay
   const [delay, setDelay] = useState(20);
 
