@@ -13,11 +13,16 @@ import AlgoTest from "./components/AlgoTest";
 import MyScores from "./components/MyScores";
 
 const App = () => {
-  const [user, setUser] = useState(null);
+  // Get from sessionStorage if available
+  const [user, setUser] = useState(() => {
+    const saved = sessionStorage.getItem("user");
+    return saved ? JSON.parse(saved) : null;
+  });
   const [loading, setLoading] = useState(false);
 
   const clearUser = () => {
     setUser(null);
+    sessionStorage.removeItem("user");
   };
 
   const onLogoClick = () => {

@@ -31,7 +31,10 @@ const SignUp = (props) => {
 
     signUp(credentials)
       .then(() => signIn(credentials))
-      .then((res) => setUser(res.data.user))
+      .then((res) => {
+        setUser(res.data.user);
+        sessionStorage.setItem("user", JSON.stringify(res.data.user));
+      })
       .then(() => navigate("/"))
       .catch((error) => {
         if (error.response && error.response.status === 422) {
