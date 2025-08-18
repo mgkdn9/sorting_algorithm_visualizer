@@ -46,7 +46,10 @@ const SignIn = (props) => {
 
   return (
     <div style={container} className="row">
-      <LoadingOverlay visible={props.loading} />
+      <LoadingOverlay
+        visible={props.loading}
+        text="Logging you in. This might take a minute..."
+      />
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
         <h3>Sign In</h3>
         <Form onSubmit={onSignIn}>
