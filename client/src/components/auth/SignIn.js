@@ -6,6 +6,7 @@ import { signIn } from "../../api/auth";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
 
 const SignIn = (props) => {
   const container = {
@@ -14,12 +15,14 @@ const SignIn = (props) => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
   const onSignIn = (event) => {
     event.preventDefault();
     props.setLoading(true);
+    setError("");
     const { setUser } = props;
 
     const credentials = { email, password };
@@ -28,6 +31,12 @@ const SignIn = (props) => {
       .then((res) => setUser(res.data.user))
       .then(() => navigate("/"))
       .catch((error) => {
+        // Check for backend error message
+        if (error.response && error.response.status === 401) {
+          setError("Invalid email or password");
+        } else {
+          setError("Something went wrong. Please try again.");
+        }
         console.error("Sign-in failed:", error);
         setEmail("");
         setPassword("");
@@ -66,6 +75,7 @@ const SignIn = (props) => {
           <Button variant="primary" type="submit">
             Submit
           </Button>
+          {error && <Alert variant="danger">{error}</Alert>}
         </Form>
       </div>
     </div>

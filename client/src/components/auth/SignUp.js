@@ -6,6 +6,7 @@ import { signUp, signIn } from "../../api/auth";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
 
 const SignUp = (props) => {
   const container = {
@@ -15,12 +16,14 @@ const SignUp = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
   const onSignUp = (event) => {
     event.preventDefault();
     props.setLoading(true);
+    setError("");
 
     const { setUser } = props;
 
@@ -31,6 +34,12 @@ const SignUp = (props) => {
       .then((res) => setUser(res.data.user))
       .then(() => navigate("/"))
       .catch((error) => {
+        if (error.response && error.response.status === 422) {
+          setError("Passwords must match and not be empty");
+        } else {
+          setError("Something went wrong. Please try again.");
+        }
+        console.error("Error signing up: ", error);
         setEmail("");
         setPassword("");
         setPasswordConfirmation("");
@@ -43,6 +52,7 @@ const SignUp = (props) => {
       <LoadingOverlay visible={props.loading} />
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
         <h3>Sign Up</h3>
+        {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={onSignUp}>
           <Form.Group controlId="email">
             <Form.Label>Email address</Form.Label>
